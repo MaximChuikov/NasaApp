@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/curiosityFragment">
+
+    <fragment
+        android:id="@+id/curiosityFragment"
+        android:name="com.maximchuikov.nasaapp.ui.curiosity.CuriosityFragment"
+        android:label="fragment_curiosity"
+        tools:layout="@layout/fragment_curiosity" >
+        <action
+            android:id="@+id/action_curiosityFragment_to_photoInfoFragment"
+            app:destination="@id/photoInfoFragment">
+            <argument
+                android:name="filteredPhoto"
+                app:argType="com.maximchuikov.nasaapp.data.model.Photo" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/opportunityFragment"
+        android:name="com.maximchuikov.nasaapp.ui.opportunity.OpportunityFragment"
+        android:label="fragment_opportunity"
+        tools:layout="@layout/fragment_opportunity" >
+        <action
+            android:id="@+id/action_opportunityFragment_to_photoInfoFragment"
+            app:destination="@id/photoInfoFragment">
+            <argument
+                android:name="filteredPhoto"
+                app:argType="com.maximchuikov.nasaapp.data.model.Photo" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/spiritFragment"
+        android:name="com.maximchuikov.nasaapp.ui.spirit.SpiritFragment"
+        android:label="fragment_spirit"
+        tools:layout="@layout/fragment_spirit" >
+        <action
+            android:id="@+id/action_spiritFragment_to_photoInfoFragment"
+            app:destination="@id/photoInfoFragment">
+            <argument
+                android:name="filteredPhoto"
+                app:argType="com.maximchuikov.nasaapp.data.model.Photo" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/photoInfoFragment"
+        android:name="com.maximchuikov.nasaapp.ui.PhotoInfoDialogFragment"
+        android:label="fragment_photo"
+        tools:layout="@layout/fragment_photo_info_dialog" />
+</navigation>
